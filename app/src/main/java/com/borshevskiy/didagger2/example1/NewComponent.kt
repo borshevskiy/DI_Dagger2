@@ -2,14 +2,8 @@ package com.borshevskiy.didagger2.example1
 
 import dagger.Component
 
-@Component
+@Component(modules = [Module::class])
 interface NewComponent {
-
-    fun getKeyboard(): Keyboard
-
-    fun getMouse(): Mouse
-
-    fun getMonitor(): Monitor
 
     fun inject(activity: Activity)
 }
