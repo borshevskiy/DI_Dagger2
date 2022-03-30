@@ -1,4 +1,6 @@
 package com.borshevskiy.didagger2.example1
 
-class Monitor {
+import javax.inject.Inject
+
+class Monitor @Inject constructor() {
 }

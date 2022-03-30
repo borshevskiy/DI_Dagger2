@@ -1,6 +1,6 @@
 package com.borshevskiy.didagger2.example1
 
-object Component {
+class Component {
 
     private fun getComputer(): Computer {
         val monitor = Monitor()
@@ -12,10 +12,5 @@ object Component {
             Processor()
         )
         return Computer(monitor, computerTower, keyboard, mouse)
-    }
-
-    fun inject(activity: Activity) {
-        activity.computer = getComputer()
-        activity.keyboard = Keyboard()
     }
 }
