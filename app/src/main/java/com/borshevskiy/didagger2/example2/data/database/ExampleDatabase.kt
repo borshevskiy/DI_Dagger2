@@ -5,10 +5,10 @@ import android.util.Log
 import com.borshevskiy.didagger2.R
 import javax.inject.Inject
 
-class ExampleDatabase @Inject constructor(private val context: Context){
+class ExampleDatabase @Inject constructor(private val context: Context, private val timeMillis: Long){
 
     fun method() {
-        Log.d(LOG_TAG, "ExampleDatabase ${context.getString(R.string.app_name)}")
+        Log.d(LOG_TAG, "ExampleDatabase ${timeMillis}")
     }
 
     companion object {
