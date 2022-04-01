@@ -4,21 +4,17 @@ import android.content.Context
 import com.borshevskiy.didagger2.example2.presentation.MainActivity
 import dagger.BindsInstance
 import dagger.Component
+import javax.inject.Singleton
 
+@Singleton
 @Component(modules = [DataModule::class, DomainModule::class])
 interface AppComponent {
 
     fun inject(activity: MainActivity)
 
-    @Component.Builder
-    interface AppComponentBuilder {
+    @Component.Factory
+    interface AppComponentFactory {
 
-        @BindsInstance
-        fun context(context: Context): AppComponentBuilder
-
-        @BindsInstance
-        fun time(timeMillis: Long):  AppComponentBuilder
-
-        fun build(): AppComponent
+        fun create(@BindsInstance context: Context, @BindsInstance timeMillis: Long): AppComponent
     }
 }
