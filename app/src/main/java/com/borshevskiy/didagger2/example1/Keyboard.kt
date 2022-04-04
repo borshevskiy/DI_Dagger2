@@ -1,4 +1,3 @@
 package com.borshevskiy.didagger2.example1
 
-class Keyboard {
-}
+class Keyboard
