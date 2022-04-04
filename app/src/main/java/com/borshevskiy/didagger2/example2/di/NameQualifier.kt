@@ -1,7 +1,7 @@
 package com.borshevskiy.didagger2.example2.di
 
-import javax.inject.Scope
+import javax.inject.Qualifier
 
-@Scope
+@Qualifier
 @Retention(AnnotationRetention.RUNTIME)
-annotation class CustomScope
+annotation class NameQualifier()
